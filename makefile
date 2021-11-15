@@ -41,11 +41,10 @@ CC       		:= gcc
 CFLAGS   		:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
 CONTRIBUTING	:= ./CONTRIBUTING.md
 COPY			:= cp
-DIRS			:= ../.docs/
 HEADERS 		:= $(wildcard ./*.h)
-LICENSE			:= ./LICENSE
 LFLAGS   		:= -lm
 LIBRARY  		:= ./liborvaenting.a
+LICENSE			:= ./LICENSE
 LISTER			:= cat
 LSTART			:= ./.docs/license_begin.md
 LSTOP			:= ./.docs/license_end.md
@@ -60,7 +59,6 @@ README			:= ./README.md
 REMOVE   		:= rm
 SOFTWARE		:= ./.docs/software_requirements.md
 SOURCE   		:= $(wildcard ./orvaenting_*.c)
-SUPER_SOFTWARE	:= ../.docs/software_requirements.md
 VALGRIND 		:= valgrind.log
 VFLAGS   		:= --leak-check=full --redzone-size=200 --show-leak-kinds=all
 YAML			:= $(wildcard ./.docs/*.yaml)
@@ -75,6 +73,7 @@ YAML			:= $(wildcard ./.docs/*.yaml)
 
 .PHONY: default
 default: submodule
+	make tidy
 
 $(LIBRARY): $(OBJECTS)
 	$(ARCHIVE) $(AFLAGS) $@ $^
@@ -98,6 +97,3 @@ submodule: $(HEADERS) $(LIBRARY)
 .PHONY: tidy
 tidy: $(LIBRARY) $(OBJECTS)
 	$(REMOVE) $^
-
-.PHONY: update
-update: submodule tidy
