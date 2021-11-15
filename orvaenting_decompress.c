@@ -31,3 +31,24 @@
  */
 
 #include "orvaenting.h"
+
+
+
+/**
+ * Functions.
+ */
+
+inline  float       NAME (decompress_f)     (const float        ratio)
+{
+    return 2.0F * asinf (ratio / 2.0F);
+}
+
+inline  double      NAME (decompress_d)     (const double       ratio)
+{
+    return 2.0  * asin  (ratio / 2.0);
+}
+
+inline  long double NAME (decompress_ld)    (const long double  ratio)
+{
+    return 2.0L * asinl (ratio / 2.0L);
+}

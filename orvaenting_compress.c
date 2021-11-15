@@ -31,3 +31,24 @@
  */
 
 #include "orvaenting.h"
+
+
+
+/**
+ * Functions.
+ */
+
+inline  float       NAME (compress_f)   (const float        angle)
+{
+    return 2.0F * sinf  (angle / 2.0F);
+}
+
+inline  double      NAME (compress_d)   (const double       angle)
+{
+    return 2.0  * sin   (angle / 2.0);
+}
+
+inline  long double NAME (compress_ld)  (const long double  angle)
+{
+    return 2.0L * sinl  (angle / 2.0L);
+}

@@ -57,13 +57,13 @@
  */
 
 // Utility functions.
-extern  float       NAME (compress_f)       (const float        value);
-extern  double      NAME (compress_d)       (const double       value);
-extern  long double NAME (compress_ld)      (const long double  value);
+extern  float       NAME (compress_f)       (const float        angle);
+extern  double      NAME (compress_d)       (const double       angle);
+extern  long double NAME (compress_ld)      (const long double  angle);
 
-extern  float       NAME (decompress_f)     (const float        value);
-extern  double      NAME (decompress_d)     (const double       value);
-extern  long double NAME (decompress_ld)    (const long double  value);
+extern  float       NAME (decompress_f)     (const float        ratio);
+extern  double      NAME (decompress_d)     (const double       ratio);
+extern  long double NAME (decompress_ld)    (const long double  ratio);
 
 
 
