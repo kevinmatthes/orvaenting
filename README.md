@@ -73,20 +73,19 @@ isosceles triangles.
 Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
 **isosceles triangle** assuming the *Fifth Euclidian Postulate* to be fulfilled.
 Then,
-$$
-þ = 2 \cdot \sin \left( \frac \gamma 2 \right)
-$$
-$$
-\gamma = 2 \cdot \arcsin \left( \frac þ 2 \right)
-$$
+\begin{align*}
+\textit {\textrm \th} &= 2 \cdot \sin \left( \frac \gamma 2 \right) \\
+\gamma &= 2 \cdot \arcsin \left( \frac {\textit {\textrm \th}} 2 \right)
+\end{align*}
 describe the instructions in order to compress and decompress the resulting
 isosceles triangle with
 
-* $þ = \frac g s$ being the **Side Ratio** of *Main Side* $g$ and *Further Side*
-  $s$.
+* $\textit {\textrm \th} = \frac g s$ being the **Side Ratio** of *Main Side*
+  $g$ and *Further Side* $s$.
 * $\gamma$ being the angle facing $g$.
 
-This repository provides three sample C implementations of these formulas.
+This repository provides three sample C implementations for each of these
+formulas.
 
 
 
