@@ -58,4 +58,26 @@ version of the license is as follows:
 When compiling a printable version of this documentation using `pandoc`, the
 full license will be attached automatically to the resulting document.
 
+
+
+## Build Instructions
+
+### `liborvaenting.a`
+
+The library with all utility functions can be created by calling
+
+```
+make liborvaenting.a
+```
+
+
+
+### `orvaenting.pdf`
+
+In order to create a printable version of this documentation, just call
+
+```
+make orvaenting.pdf
+```
+
 <!----------------------------------------------------------------------------->
