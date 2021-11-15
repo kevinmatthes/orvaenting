@@ -63,7 +63,7 @@ full license will be attached automatically to the resulting document.
 ## Introduction
 
 Isosceles triangles have the interesting property of being compressible into a
-single real number within the range $[0, 2]$.  When keeping at least one side's
+single real number within the range $(0, 2)$.  When keeping at least one side's
 length, both its side lengths and angles can be restored without any loss of
 information.
 
