@@ -109,4 +109,19 @@ In order to create a printable version of this documentation, just call
 make orvaenting.pdf
 ```
 
+
+
+## Citing this Repository
+
+When referring to this repository, please use the following Bib\TeX\ entry:
+
+```
+@online{orvaenting,
+    author      =   {{M}atthes, {K}evin},
+    title       =   {\"{O}rv\ae nting},
+    subtitle    =   {{T}he {C}ompression {A}lgorithm for {I}sosceles {T}riangles},
+    url         =   {https://github.com/kevinmatthes/orvaenting},
+}
+```
+
 <!----------------------------------------------------------------------------->
