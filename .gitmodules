@@ -1,0 +1,3 @@
+[submodule "contributing"]
+	path = contributing
+	url = https://github.com/kevinmatthes/contributing
