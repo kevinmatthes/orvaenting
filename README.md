@@ -60,6 +60,36 @@ full license will be attached automatically to the resulting document.
 
 
 
+## Introduction
+
+Isosceles triangles have the interesting property of being compressible into a
+single real number within the range $[0, 2]$.  When keeping at least one side's
+length, both its side lengths and angles can be restored without any loss of
+information.
+
+This approach, the Örvænting Theorem, allows speeding up calculations regarding
+isosceles triangles.
+
+Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
+**isosceles triangle** assuming the *Fifth Euclidian Postulate* to be fulfilled.
+Then,
+$$
+þ = 2 \cdot \sin \left( \frac \gamma 2 \right)
+$$
+$$
+\gamma = 2 \cdot \arcsin \left( \frac þ 2 \right)
+$$
+describe the instructions in order to compress and decompress the resulting
+isosceles triangle with
+
+* $þ = \frac g s$ being the **Side Ratio** of *Main Side* $g$ and *Further Side*
+  $s$.
+* $\gamma$ being the angle facing $g$.
+
+This repository provides three sample C implementations of these formulas.
+
+
+
 ## Build Instructions
 
 ### `liborvaenting.a`
