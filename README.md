@@ -155,26 +155,6 @@ isosceles triangle with
 
 ## Build Instructions
 
-### `liborvaenting.a`
-
-The library with all utility functions can be created by calling
-
-```
-make liborvaenting.a
-```
-
-
-
-### `orvaenting.pdf`
-
-In order to create a printable version of this documentation, just call
-
-```
-make orvaenting.pdf
-```
-
-
-
 ## Citing this Repository
 
 When referring to this repository, please use the following Bib\TeX\ entry:
