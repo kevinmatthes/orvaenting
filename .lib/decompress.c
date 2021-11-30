@@ -1,5 +1,5 @@
 /**
- * orvaenting_decompression.c : the decompression step.
+ * decompress.c : the decompression step.
  *
  * See `LICENSE' for full license.
  * See `README.md' for project details.
@@ -38,17 +38,17 @@
  * Functions.
  */
 
-inline  float       NAME (decompress_f)     (const float        ratio)
+inline float NAME (decompress_f) (const float ratio)
 {
     return 2.0F * asinf (ratio / 2.0F);
 }
 
-inline  double      NAME (decompress_d)     (const double       ratio)
+inline double NAME (decompress_d) (const double ratio)
 {
-    return 2.0  * asin  (ratio / 2.0);
+    return 2.0 * asin (ratio / 2.0);
 }
 
-inline  long double NAME (decompress_ld)    (const long double  ratio)
+inline long double NAME (decompress_ld) (const long double ratio)
 {
     return 2.0L * asinl (ratio / 2.0L);
 }
