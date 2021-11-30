@@ -46,19 +46,19 @@ REMOVE	:= rm
 AFLAGS	:= rs
 CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
 LFLAGS	:= -lm
-PFLAGS	:= -N
 
-# Make directories.
-MDOCS	:= -C ./.docs/
+# Directories.
+LIBDIR	:= ../../.lib/
+DIRS	:= $(LIBDIR)
 
-# File types.
+# Library compilation requirements.
 HEADERS	:= $(wildcard ./*.h)
-OBJECTS	:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
-SOURCE	:= $(wildcard ./orvaenting_*.c)
+LIBRARY	:= ./liborvaenting.a
+SOURCE	:= $(wildcard ./*.c)
+OBJECTS	:= $(subst .c,.o, $(SOURCE))
 
 # Concrete files.
-LIBRARY	:= ./liborvaenting.a
-SELF	:= ./README.md
+SELF	:= ./makefile
 
 
 
@@ -69,8 +69,13 @@ SELF	:= ./README.md
 ##
 
 .PHONY: default
-default: submodule
-	make tidy
+default: library
+
+$(DIRS):
+	$(NEWDIR) $@
+
+.PHONY: library
+library: $(LIBRARY)
 
 $(LIBRARY): $(OBJECTS)
 	$(ARCHIVE) $(AFLAGS) $@ $^
@@ -78,15 +83,11 @@ $(LIBRARY): $(OBJECTS)
 $(OBJECTS): $(SOURCE)
 	$(CC) $(CFLAGS) -c $(LFLAGS) $^
 
-.PHONY: pdf
-pdf:
-	make $(MDOCS) default
-
 .PHONY: submodule
-submodule: $(HEADERS) $(LIBRARY)
-	$(COPY) $^ ../
+submodule: $(HEADERS) $(LIBRARY) $(LIBDIR)
+	$(COPY) $(HEADERS) $(LIBRARY) $(LIBDIR)
+	make tidy
 
 .PHONY: tidy
 tidy: $(LIBRARY) $(OBJECTS)
 	$(REMOVE) $^
-	make $(MDOCS) tidy
