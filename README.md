@@ -143,7 +143,7 @@ isosceles triangle with
    $$
 
    This equation can be resolved by $\textit \th$ by scaling its both sides with
-   $2$ which gives the first equation of the theorem.
+   $2$ such that we achieve the first equation of the theorem.
 
 
 
