@@ -1,11 +1,4 @@
-/**
- * decompress.c : the decompression step.
- *
- * See `LICENSE' for full license.
- * See `README.md' for project details.
- */
-
-/**
+/*
  * Copyright (C) 2021 Kevin Matthes
  *
  * This program is free software; you can redistribute it and/or modify
@@ -23,10 +16,22 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+/**
+ * \file    decompress.c
+ * \brief   The decompression step.
+ *
+ * \author      Kevin Matthes
+ * \copyright   (C) 2021 Kevin Matthes.
+ *              This file is licensed GPL 2 as of June 1991.
+ * \date        2021
+ * \note        See `LICENSE' for full license.
+ *              See `README.md' for project details.
+ */
+
 /******************************************************************************/
 
 
-/**
+/*
  * Includes.
  */
 
@@ -34,7 +39,7 @@
 
 
 
-/**
+/*
  * Functions.
  */
 
@@ -52,3 +57,5 @@ inline long double NAME (decompress_ld) (const long double ratio)
 {
     return 2.0L * asinl (ratio / 2.0L);
 }
+
+/******************************************************************************/
