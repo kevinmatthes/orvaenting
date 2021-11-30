@@ -35,29 +35,9 @@
 #
 ##
 
-# Software.
-ARCHIVE	:= ar
-CC		:= gcc
-COPY	:= cp
-REMOVE	:= rm
-
-# Software flags.
-AFLAGS	:= rs
-CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
-LFLAGS	:= -lm
-PFLAGS	:= -N
-
 # Make directories.
 MDOCS	:= -C ./.docs/
-
-# File types.
-HEADERS	:= $(wildcard ./*.h)
-OBJECTS	:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
-SOURCE	:= $(wildcard ./orvaenting_*.c)
-
-# Concrete files.
-LIBRARY	:= ./liborvaenting.a
-SELF	:= ./makefile
+MLIB	:= -C ./.lib/
 
 
 
@@ -69,23 +49,20 @@ SELF	:= ./makefile
 
 .PHONY: default
 default: submodule
-	make tidy
 
-$(LIBRARY): $(OBJECTS)
-	$(ARCHIVE) $(AFLAGS) $@ $^
-
-$(OBJECTS): $(SOURCE)
-	$(CC) $(CFLAGS) -c $(LFLAGS) $^
+.PHONY: library
+library:
+	make $(MLIB) default
 
 .PHONY: pdf
 pdf:
 	make $(MDOCS) default
 
 .PHONY: submodule
-submodule: $(HEADERS) $(LIBRARY)
-	$(COPY) $^ ../
+submodule:
+	make $(MLIB) submodule
 
 .PHONY: tidy
-tidy: $(LIBRARY) $(OBJECTS)
-	$(REMOVE) $^
+tidy:
 	make $(MDOCS) tidy
+	make $(MLIB) tidy
