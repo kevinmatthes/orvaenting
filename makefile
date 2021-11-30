@@ -50,6 +50,9 @@ CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
 LFLAGS	:= -lm
 PFLAGS	:= -N
 
+# Make directories.
+MDOCS	:= -C ./.docs/
+
 # File types.
 HEADERS	:= $(wildcard ./*.h)
 OBJECTS	:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
@@ -57,16 +60,8 @@ SOURCE	:= $(wildcard ./orvaenting_*.c)
 YAML	:= $(wildcard ./.docs/*.yaml)
 
 # Concrete files.
-CONTRIBUTING	:= ./CONTRIBUTING.md
-LIBRARY			:= ./liborvaenting.a
-LICENSE			:= ./LICENSE
-LSTART			:= ./.docs/license_begin.md
-LSTOP			:= ./.docs/license_end.md
-META_CONST		:= ./.docs/meta.yaml
-NEWPAGE			:= ./.docs/newpage.md
-PDF				:= ./orvaenting.pdf
-README			:= ./README.md
-SOFTWARE		:= ./.docs/software_requirements.md
+LIBRARY	:= ./liborvaenting.a
+SELF	:= ./README.md
 
 
 
@@ -86,14 +81,9 @@ $(LIBRARY): $(OBJECTS)
 $(OBJECTS): $(SOURCE)
 	$(CC) $(CFLAGS) -c $(LFLAGS) $^
 
-$(PDF):	$(CONTRIBUTING) $(LICENSE) $(LSTART) $(LSTOP) $(NEWPAGE) $(README)	\
-		$(SOFTWARE) $(YAML)
-	$(LISTER)	$(YAML)							$(NEWPAGE) \
-				$(README)						$(NEWPAGE) \
-				$(SOFTWARE)						$(NEWPAGE) \
-				$(CONTRIBUTING)					$(NEWPAGE) \
-				$(LSTART) $(LICENSE) $(LSTOP)	\
-	| $(PANDOC) $(PFLAGS) -o $@
+.PHONY: pdf
+pdf:
+	make $(MDOCS) default
 
 .PHONY: submodule
 submodule: $(HEADERS) $(LIBRARY)
@@ -102,3 +92,4 @@ submodule: $(HEADERS) $(LIBRARY)
 .PHONY: tidy
 tidy: $(LIBRARY) $(OBJECTS)
 	$(REMOVE) $^
+	make $(MDOCS) tidy
