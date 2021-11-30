@@ -144,6 +144,12 @@ isosceles triangle with
 
    This equation can be resolved by $\textit \th$ by scaling its both sides with
    $2$ such that we achieve the first equation of the theorem.
+3. Due to $\arcsin$ being the counterpart of $\sin$, the first equation of the
+   theorem can be resolved by $\gamma$ which gives
+   $$
+   \gamma = 2 \cdot \arcsin \left( \frac {\textit \th} 2 \right)
+   $$
+   and thereby the second equation of the theorem.  \hfill $\blacksquare$
 
 
 
