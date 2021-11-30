@@ -105,13 +105,13 @@ isosceles triangle with
    Due to the Fifth Euclidian Postulate being fulfilled, the sum of all angles
    within the considered triangle equals $\pi$.  Hence, $\gamma$ is the sole
    angle for which $\gamma \lesssim \pi$ might hold true since the other angles
-   are defined facing a side length $s$ such that they are of equal size, as
+   are defined facing a side of length $s$ such that they are of equal size, as
    well.  In case $\gamma$ would not be the angle approaching $\pi$, both
-   $\alpha$ and $\beta$, which will denote the other ones in the following,
-   would approach $\pi$ such that sum of all angles' sizes would be greater than
-   $\pi$.
+   $\alpha$ and $\beta$, which will denote the other angles in the following,
+   would approach $\pi$ such that the sum of all angles' sizes would be greater
+   than $\pi$.
 
-   In case $\gamma \lesssim \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
+   In case $\gamma \to \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
    $$
    \textit {\th} := \frac g s \approx \frac {2 \cdot s} s = 2 \, .
    $$
@@ -121,13 +121,13 @@ isosceles triangle with
    \alpha + \beta + \gamma \overset ! = \pi \land \alpha = \beta \implies \sup
    \alpha = \sup \beta = \frac \pi 2
    $$
-   such that $\inf \gamma = 0$.  In this case, $g \gtrsim 0$ which gives
+   such that $\inf \gamma = 0$.  In this case, $g \to 0$ which gives
    $$
    \textit \th := \frac g s \approx \frac 0 s = 0 \, .
    $$
 
    This gives the upper and lower bounds for $\textit \th$.  Due to $\gamma \in
-   (0, \pi)$, as shown, $\textit \th$ will never reach its interval's bound, as
+   (0, \pi)$, as shown, $\textit \th$ will never reach its interval's bounds, as
    well.
 
 
