@@ -1,11 +1,11 @@
-/**
+/*
  * compress.c : the compression step.
  *
  * See `LICENSE' for full license.
  * See `README.md' for project details.
  */
 
-/**
+/*
  * Copyright (C) 2021 Kevin Matthes
  *
  * This program is free software; you can redistribute it and/or modify
@@ -26,7 +26,7 @@
 /******************************************************************************/
 
 
-/**
+/*
  * Includes.
  */
 
@@ -34,7 +34,7 @@
 
 
 
-/**
+/*
  * Functions.
  */
 
@@ -52,3 +52,5 @@ inline long double NAME (compress_ld) (const long double angle)
 {
     return 2.0L * sinl (angle / 2.0L);
 }
+
+/******************************************************************************/

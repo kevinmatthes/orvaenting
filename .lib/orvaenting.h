@@ -1,11 +1,11 @@
-/**
+/*
  * orvaenting.h : the main header of `orvaenting'.
  *
  * See `LICENSE' for full license.
  * See `README.md' for project details.
  */
 
-/**
+/*
  * Copyright (C) 2021 Kevin Matthes
  *
  * This program is free software; you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 /******************************************************************************/
 
-/**
+/*
  * Security settings.
  */
 
@@ -35,7 +35,7 @@
 
 
 
-/**
+/*
  * Includes.
  */
 
@@ -43,7 +43,7 @@
 
 
 
-/**
+/*
  * Macros.
  */
 
@@ -52,7 +52,7 @@
 
 
 
-/**
+/*
  * Function declarations.
  */
 
@@ -67,7 +67,7 @@ extern  long double NAME (decompress_ld)    (const long double  ratio);
 
 
 
-/**
+/*
  * End of header.
  */
 
