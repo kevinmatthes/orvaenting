@@ -129,6 +129,21 @@ isosceles triangle with
    This gives the upper and lower bounds for $\textit \th$.  Due to $\gamma \in
    (0, \pi)$, as shown, $\textit \th$ will never reach its interval's bounds, as
    well.
+2. Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
+   isosceles triangle, assuming the Fifth Euclidian Postulate to be fulfilled
+   and $\gamma$ facing $g$.
+
+   By constructing the height over $g$, we achieve two perpendicular triangles
+   which are mirrored along $g$ such that, for each one of those, $s$ is the
+   respective hypothenuse.  Furthermore, $\gamma$ is divided into two subangles
+   of the same size, as well, such that
+   $$
+   \sin \frac \gamma 2 = \frac {\frac g 2} s = \frac 1 2 \cdot \frac g s = \frac
+   1 2 \cdot \textit \th = \frac {\textit \th} 2 \, .
+   $$
+
+   This equation can be resolved by $\textit \th$ by scaling its both sides with
+   $2$ which gives the first equation of the theorem.
 
 
 
