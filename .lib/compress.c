@@ -1,5 +1,5 @@
 /**
- * orvaenting_compress.c : the compression step.
+ * compress.c : the compression step.
  *
  * See `LICENSE' for full license.
  * See `README.md' for project details.
@@ -38,17 +38,17 @@
  * Functions.
  */
 
-inline  float       NAME (compress_f)   (const float        angle)
+inline float NAME (compress_f) (const float angle)
 {
-    return 2.0F * sinf  (angle / 2.0F);
+    return 2.0F * sinf (angle / 2.0F);
 }
 
-inline  double      NAME (compress_d)   (const double       angle)
+inline double NAME (compress_d) (const double angle)
 {
-    return 2.0  * sin   (angle / 2.0);
+    return 2.0 * sin (angle / 2.0);
 }
 
-inline  long double NAME (compress_ld)  (const long double  angle)
+inline long double NAME (compress_ld) (const long double angle)
 {
-    return 2.0L * sinl  (angle / 2.0L);
+    return 2.0L * sinl (angle / 2.0L);
 }
