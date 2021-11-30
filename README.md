@@ -90,8 +90,45 @@ isosceles triangle with
   Side* $g$ and *Further Side* $s$.
 * $\gamma$ being the angle facing $g$.
 
-This repository provides three sample C implementations for each of these
-formulas.
+
+
+### Proof
+
+1. Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
+   isosceles triangle assuming the Fifth Euclidian Postulate to be fulfilled.
+
+   Then, at least two sides of the resulting triangle have equal lengths.  These
+   sides are named *Further Sides* whose length is denoted by $s$.  The third
+   side whose length might not equal $s$ is named *Main Side* and denoted by
+   $g$.  By definition, this side faces the angle $\gamma$.
+
+   Due to the Fifth Euclidian Postulate being fulfilled, the sum of all angles
+   within the considered triangle equals $\pi$.  Hence, $\gamma$ is the sole
+   angle for which $\gamma \lesssim \pi$ might hold true since the other angles
+   are defined facing a side length $s$ such that they are of equal size, as
+   well.  In case $\gamma$ would not be the angle approaching $\pi$, both
+   $\alpha$ and $\beta$, which will denote the other ones in the following,
+   would approach $\pi$ such that sum of all angles' sizes would be greater than
+   $\pi$.
+
+   In case $\gamma \lesssim \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
+   $$
+   \textit {\th} := \frac g s \approx \frac {2 \cdot s} s = 2 \, .
+   $$
+
+   Due to
+   $$
+   \alpha + \beta + \gamma \overset ! = \pi \land \alpha = \beta \implies \sup
+   \alpha = \sup \beta = \frac \pi 2
+   $$
+   such that $\inf \gamma = 0$.  In this case, $g \gtrsim 0$ which gives
+   $$
+   \textit \th := \frac g s \approx \frac 0 s = 0 \, .
+   $$
+
+   This gives the upper and lower bounds for $\textit \th$.  Due to $\gamma \in
+   (0, \pi)$, as shown, $\textit \th$ will never reach its interval's bound, as
+   well.
 
 
 
