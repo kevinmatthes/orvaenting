@@ -39,10 +39,8 @@
 ARCHIVE	:= ar
 CC		:= gcc
 COPY	:= cp
-LISTER	:= cat
 NEWDIR	:= mkdir
 REMOVE	:= rm
-PANDOC	:= pandoc
 
 # Software flags.
 AFLAGS	:= rs
