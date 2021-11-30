@@ -70,18 +70,24 @@ information.
 This approach, the Örvænting Theorem, allows speeding up calculations regarding
 isosceles triangles.
 
+This repository provides three sample C implementations for each formula.
+
+
+
+### The Theorem
+
 Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
 **isosceles triangle** assuming the *Fifth Euclidian Postulate* to be fulfilled.
 Then,
 \begin{align*}
-\textit {\textrm \th} &= 2 \cdot \sin \left( \frac \gamma 2 \right) \\
-\gamma &= 2 \cdot \arcsin \left( \frac {\textit {\textrm \th}} 2 \right)
+\textit \th &= 2 \cdot \sin \left( \frac \gamma 2 \right) \, , \\
+\gamma &= 2 \cdot \arcsin \left( \frac {\textit \th} 2 \right)
 \end{align*}
 describe the instructions in order to compress and decompress the resulting
 isosceles triangle with
 
-* $\textit {\textrm \th} = \frac g s$ being the **Side Ratio** of *Main Side*
-  $g$ and *Further Side* $s$.
+* $\textit \th := \frac g s \in (0, \, 2)$ being the **Side Ratio** of *Main
+  Side* $g$ and *Further Side* $s$.
 * $\gamma$ being the angle facing $g$.
 
 This repository provides three sample C implementations for each of these
