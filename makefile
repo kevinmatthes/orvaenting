@@ -57,7 +57,6 @@ MDOCS	:= -C ./.docs/
 HEADERS	:= $(wildcard ./*.h)
 OBJECTS	:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
 SOURCE	:= $(wildcard ./orvaenting_*.c)
-YAML	:= $(wildcard ./.docs/*.yaml)
 
 # Concrete files.
 LIBRARY	:= ./liborvaenting.a
