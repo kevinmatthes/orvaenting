@@ -1,0 +1,85 @@
+/*
+ * Copyright (C) 2021 Kevin Matthes
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/**
+ * \file    orvaenting.dox
+ * \brief   The docstrings for Doxygen.
+ *
+ * \author      Kevin Matthes
+ * \copyright   (C) 2021 Kevin Matthes.
+ *              This file is licensed GPL 2 as of June 1991.
+ * \date        2021
+ * \note        See `LICENSE' for full license.
+ *              See `README.md' for project details.
+ */
+
+/******************************************************************************/
+
+/*! \def    __ORVAENTING_H__
+ *
+ * \brief   Ensuring this header being included just once.
+ */
+
+/*! \def    NAME
+ *
+ * \brief   The name mangling macro for this library.
+ * \param   identifier  The identifier to mangle.
+ */
+
+
+
+/*! \fn     double orvaenting_compress_d (const double angle)
+ *
+ * \brief   Compress an isosceles triangle given by the angle facing its Main
+ *          Side.
+ * \param   angle   The required angle given in `double` precision.
+ */
+
+/*! \fn     float orvaenting_compress_f (const float angle)
+ *
+ * \brief   Compress an isosceles triangle given by the angle facing its Main
+ *          Side.
+ * \param   angle   The required angle given in `float` precision.
+ */
+
+/*! \fn     long double orvaenting_compress_ld (const long double angle)
+ *
+ * \brief   Compress an isosceles triangle given by the angle facing its Main
+ *          Side.
+ * \param   angle   The required angle given in `long double` precision.
+ */
+
+/*! \fn     double orvaenting_decompress_d (const double ratio)
+ *
+ * \brief   Uncompress an isosceles triangle given by its Side Ratio.
+ * \param   ratio   The required Side Ratio given in `double` precision.
+ */
+
+/*! \fn     float orvaenting_decompress_f (const float ratio)
+ *
+ * \brief   Uncompress an isosceles triangle given by its Side Ratio.
+ * \param   ratio   The required Side Ratio given in `float` precision.
+ */
+
+/*! \fn     long double orvaenting_decompress_ld (const long double ratio)
+ *
+ * \brief   Uncompress an isosceles triangle given by its Side Ratio.
+ * \param   ratio   The required Side Ratio given in `long double` precision.
+ */
+
+/******************************************************************************/
