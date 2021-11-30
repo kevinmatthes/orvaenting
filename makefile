@@ -35,33 +35,38 @@
 #
 ##
 
-AFLAGS   		:= rs
-ARCHIVE  		:= ar
-CC       		:= gcc
-CFLAGS   		:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
+# Software.
+ARCHIVE	:= ar
+CC		:= gcc
+COPY	:= cp
+LISTER	:= cat
+NEWDIR	:= mkdir
+REMOVE	:= rm
+PANDOC	:= pandoc
+
+# Software flags.
+AFLAGS	:= rs
+CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
+LFLAGS	:= -lm
+PFLAGS	:= -N
+
+# File types.
+HEADERS	:= $(wildcard ./*.h)
+OBJECTS	:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
+SOURCE	:= $(wildcard ./orvaenting_*.c)
+YAML	:= $(wildcard ./.docs/*.yaml)
+
+# Concrete files.
 CONTRIBUTING	:= ./CONTRIBUTING.md
-COPY			:= cp
-HEADERS 		:= $(wildcard ./*.h)
-LFLAGS   		:= -lm
-LIBRARY  		:= ./liborvaenting.a
+LIBRARY			:= ./liborvaenting.a
 LICENSE			:= ./LICENSE
-LISTER			:= cat
 LSTART			:= ./.docs/license_begin.md
 LSTOP			:= ./.docs/license_end.md
 META_CONST		:= ./.docs/meta.yaml
-NEWDIR			:= mkdir
 NEWPAGE			:= ./.docs/newpage.md
-OBJECTS  		:= $(subst .c,.o, $(wildcard ./orvaenting_*.c))
-PANDOC			:= pandoc
 PDF				:= ./orvaenting.pdf
-PFLAGS			:= -N
 README			:= ./README.md
-REMOVE   		:= rm
 SOFTWARE		:= ./.docs/software_requirements.md
-SOURCE   		:= $(wildcard ./orvaenting_*.c)
-VALGRIND 		:= valgrind.log
-VFLAGS   		:= --leak-check=full --redzone-size=200 --show-leak-kinds=all
-YAML			:= $(wildcard ./.docs/*.yaml)
 
 
 
