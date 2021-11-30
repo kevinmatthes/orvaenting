@@ -39,6 +39,7 @@
 ARCHIVE	:= ar
 CC		:= gcc
 COPY	:= cp
+DOXYGEN	:= doxygen
 NEWDIR	:= mkdir
 REMOVE	:= rm
 
@@ -46,6 +47,9 @@ REMOVE	:= rm
 AFLAGS	:= rs
 CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
 LFLAGS	:= -lm
+
+# Make directories.
+MDOX	:= -C ../.doxygen/latex/
 
 # Directories.
 LIBDIR	:= ../../.lib/
@@ -58,7 +62,8 @@ SOURCE	:= $(wildcard ./*.c)
 OBJECTS	:= $(subst .c,.o, $(SOURCE))
 
 # Concrete files.
-SELF	:= ./makefile
+DOXYFILE	:= ./doxygen.cfg
+SELF		:= ./makefile
 
 
 
@@ -73,6 +78,11 @@ default: library
 
 $(DIRS):
 	$(NEWDIR) $@
+
+.PHONY: doxygen
+doxygen: $(HEADERS) $(SOURCE)
+	$(DOXYGEN) $(DOXYFILE)
+	make $(MDOX) all
 
 .PHONY: library
 library: $(LIBRARY)

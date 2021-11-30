@@ -50,6 +50,10 @@ MLIB	:= -C ./.lib/
 .PHONY: default
 default: submodule
 
+.PHONY: doxygen
+doxygen:
+	make $(MLIB) doxygen
+
 .PHONY: library
 library:
 	make $(MLIB) default
