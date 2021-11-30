@@ -34,9 +34,26 @@ will be listed and explained in the following.
 Please note that the conventions are sorted by the concerning coding languages
 since they may differ between different languages.
 
+For some conventions, lexers are provided within the `.lex` directory of the
+repository.  Running them over the source files ensures the described rules to
+be fulfilled.  If there should be a lexer for a certain rule, its name will be
+given in parenthesis after the name of the top-most rule.
+
 
 
 ## General Conventions
+
+### Language (`british.l`)
+
+All code and comments shall be written using **British English** with *-ise*
+suffixes.
+
+As in the terminology of \LaTeX, there will be *no* **French Spacing** such that
+after finishing a phrase, two space characters or a line break must be placed.
+This is only required if there will be another sentence following the previous
+one.
+
+
 
 ### License
 
@@ -92,13 +109,20 @@ shall be used as in case the other one would cause problems.
 
 
 
-### Trailing Newline
+### Line Length (`line-length.l`)
+
+In general, if no exception is defined, lines shall contain at most eighty
+characters plus a newline whitespace each.
+
+
+
+### Trailing Newline (`line-length.l`, `whitespaces.l`)
 
 Any file shall end with an empty line.
 
 
 
-### Trailing Whitespaces
+### Trailing Whitespaces (`whitespaces.l`)
 
 Trailing whitespaces (spaces and tab characters) on any line shall be cropped.
 
@@ -236,6 +260,15 @@ entering a type name, the tabulator key needs to be pressed once.  An exception
 to this rule are parameter lists.  For instance, this rule would be applied to
 the signature of a function.
 
+Functions **must not** be defined, but declared, applying this rule on their
+signature.  This is, only when a function is *declared*, its return type,
+identifier and parameter list need to be separated by pressing the tab key once.
+If it is actually *defined*, return type, identifier and parameter list shall be
+separated by a single space character only.  This exception shall ensure the
+declaration lists of functions, especially in headers, to be intuitive readable.
+On the other hand, it ensures definitions of functions being well recognisable,
+as well.
+
 After entering an identifier, such as a function's or variable's name, for
 example, the next lexeme shall start at the next tab stop, too.  This, again,
 needs to be applied to a function's declaration.
@@ -247,12 +280,15 @@ that nothing is returned, `return` and `;` must not be separated by spaces.
 Example:
 
 ```
-void    foo (void)
+void    foo     (void);
+type_t  foo_    (type_t parameter);
+
+void foo (void)
 {
     return;
 }
 
-type_t  foo_    (type_t parameter)
+type_t foo_ (type_t parameter)
 {
     type_t  ret_    = ONE;
     return ret_;
@@ -273,18 +309,6 @@ summarised using commas.
 
 The sole exception to this rule are `for` loops where the comma is allowed to be
 used in order to increment multiple variables.
-
-
-
-### Language
-
-All code and comments shall be written using **British English** with *-ise*
-suffixes.
-
-As in the terminology of \LaTeX, there will be *no* **French Spacing** such that
-after finishing a phrase, two space characters or a line break must be placed.
-This is only required if there will be another sentence following the previous
-one.
 
 
 
@@ -524,6 +548,17 @@ If available, `typedef` types shall be used instead of their definitions.
 
 In case that functions do not need to receive any data as parameters, their
 parameter list **must** be filled with `void` instead.
+
+
+
+## \LaTeX
+
+### Old Font Commands (`latex-ofc.l`)
+
+Old font commands, such as `\bf` or `\it`, **must not** be used.  Instead, they
+should be either replaced by their newer counterparts (`\textbf`, `\textit`) or
+overwritten as an abbreviation of them.  Then, they should be adjusted regarding
+their position within the curly brackets' range.
 
 
 
