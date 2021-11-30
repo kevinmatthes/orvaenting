@@ -155,16 +155,55 @@ isosceles triangle with
 
 ## Build Instructions
 
+### Default Build Instruction
+
+```
+make
+```
+
+This library is designed to be bound as a submodule in other projects.  In order
+to do so, it offers the possibility to automatically build the library and copy
+it, together with all relevant headers, to an according subdirectory in the
+super project.
+
+
+
+### Building the Library
+
+```
+make library
+```
+
+In order to just build the library and copy it by hand, one needs to run this
+command.
+
+Thereby, the library will be stored together with its build artifacts in its
+source files' directory.
+
+
+
+### Documentation
+
+```
+make pdf
+```
+
+This command will compile a printable version of this documentation using
+`pandoc`.  It will be named `documentation.pdf`, by default.  Users are
+encouraged to alter this default value of the variable `PDF` as desired.
+
+
+
 ## Citing this Repository
 
 When referring to this repository, please use the following Bib\TeX\ entry:
 
 ```
 @online{orvaenting,
-    author      =   {{M}atthes, {K}evin},
-    title       =   {\"{O}rv\ae nting},
-    subtitle    =   {{T}he {C}ompression {A}lgorithm for {I}sosceles {T}riangles},
-    url         =   {https://github.com/kevinmatthes/orvaenting},
+    author      = {{M}atthes, {K}evin},
+    title       = {\"{O}rv\ae nting},
+    subtitle    = {{T}he {C}ompression {A}lgorithm for {I}sosceles {T}riangles},
+    url         = {https://github.com/kevinmatthes/orvaenting},
 }
 ```
 
