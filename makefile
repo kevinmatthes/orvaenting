@@ -39,7 +39,6 @@
 ARCHIVE	:= ar
 CC		:= gcc
 COPY	:= cp
-NEWDIR	:= mkdir
 REMOVE	:= rm
 
 # Software flags.
@@ -58,7 +57,7 @@ SOURCE	:= $(wildcard ./orvaenting_*.c)
 
 # Concrete files.
 LIBRARY	:= ./liborvaenting.a
-SELF	:= ./README.md
+SELF	:= ./makefile
 
 
 
