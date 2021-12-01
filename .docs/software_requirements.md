@@ -66,6 +66,16 @@ It can be altered as desired.
 
 
 
+## `doxygen` (`DOXYGEN`)
+
+This application is required in order to provide an automatically generated
+documentation of the contained source code.
+
+Altering this application could be difficult since the compilation routine of
+the source code documentation is designed for `doxygen`.
+
+
+
 ## `gcc` (`CC`)
 
 The C source code of this project needs to be compiled using an according

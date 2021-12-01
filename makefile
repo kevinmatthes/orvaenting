@@ -35,9 +35,15 @@
 #
 ##
 
+# Software.
+REMOVE	:= rm
+
 # Make directories.
 MDOCS	:= -C ./.docs/
 MLIB	:= -C ./.lib/
+
+# Directories.
+DOXDIR	:= ./.doxygen/
 
 
 
@@ -63,6 +69,7 @@ pdf:
 submodule:
 	make $(MLIB) submodule
 
-tidy:
+tidy: doxygen
+	$(REMOVE) $(DOXDIR) -rf
 	make $(MDOCS) tidy
 	make $(MLIB) tidy
