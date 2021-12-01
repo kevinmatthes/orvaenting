@@ -73,18 +73,17 @@ SELF		:= ./makefile
 #
 ##
 
-.PHONY: default
+.PHONY: default doxygen library submodule tidy
+
 default: library
 
 $(DIRS):
 	$(NEWDIR) $@
 
-.PHONY: doxygen
 doxygen: $(HEADERS) $(SOURCE)
 	$(DOXYGEN) $(DOXYFILE)
 	make $(MDOX) all
 
-.PHONY: library
 library: $(LIBRARY)
 
 $(LIBRARY): $(OBJECTS)
@@ -93,11 +92,9 @@ $(LIBRARY): $(OBJECTS)
 $(OBJECTS): $(SOURCE)
 	$(CC) $(CFLAGS) -c $(LFLAGS) $^
 
-.PHONY: submodule
 submodule: $(HEADERS) $(LIBRARY) $(LIBDIR)
 	$(COPY) $(HEADERS) $(LIBRARY) $(LIBDIR)
 	make tidy
 
-.PHONY: tidy
 tidy: $(LIBRARY) $(OBJECTS)
 	$(REMOVE) $^

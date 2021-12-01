@@ -47,26 +47,22 @@ MLIB	:= -C ./.lib/
 #
 ##
 
-.PHONY: default
+.PHONY: default doxygen library pdf submodule tidy
+
 default: submodule
 
-.PHONY: doxygen
 doxygen:
 	make $(MLIB) doxygen
 
-.PHONY: library
 library:
 	make $(MLIB) default
 
-.PHONY: pdf
 pdf:
 	make $(MDOCS) default
 
-.PHONY: submodule
 submodule:
 	make $(MLIB) submodule
 
-.PHONY: tidy
 tidy:
 	make $(MDOCS) tidy
 	make $(MLIB) tidy
