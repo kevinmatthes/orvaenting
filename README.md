@@ -153,6 +153,44 @@ isosceles triangle with
 
 
 
+### Magic Numbers
+
+Triangles can be categorised regarding their angles.  These categories are in
+general:
+
+* acute
+* perpendicular
+* obtuse
+
+Furthermore, triangles might be isosceles in addition to their angles' sizes.
+Hence, in case of isosceles triangles, they are categorised by $\gamma$ since
+the other angles are of the same size and thus always less than $\pi$.
+
+A triangle is considered *perpendicular* in case that it contains an angle of
+size $\pi$.  Applying Örvænting on this angle gives $\textit \th = \sqrt 2$.
+
+*Acute* triangles contain angles less than $\pi$ only.  For instance, in case
+$\textit \th = 1$, we would consider an equilateral triangle.  The corresponding
+angles are sized $\frac \pi 3$ each.  This implies that acute isosceles
+triangles have a Side Ratio of less than $\sqrt 2$.  For the special case of
+equilateral triangles, the Side Ratio is $1 = \sqrt 1$.
+
+The last category, *obtuse* triangles, require, hence, a Side Ratio of more than
+$\sqrt 2$.  Similar to the other categories, there is a special square root
+value for obtuse isosceles triangles, as well:  $\sqrt 3$.  When applying the
+second equation of Örvænting on this value, we achieve $\frac 2 3 \cdot \pi$ as
+the angle facing $g$.
+
+In summary, the following Magic Numbers are important values of $\textit \th$:
+
+| Side Ratio | Angle (Degree) | Angle (Radian)        |
+|:----------:|:--------------:|:---------------------:|
+| $\sqrt 1$  | $60$           | $\frac \pi 3$         |
+| $\sqrt 2$  | $90$           | $\frac \pi 2$         |
+| $\sqrt 3$  | $120$          | $\frac 2 3 \cdot \pi$ |
+
+
+
 ## Build Instructions
 
 ### Default Build Instruction
