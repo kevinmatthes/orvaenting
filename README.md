@@ -104,14 +104,14 @@ isosceles triangle with
 
    Due to the Fifth Euclidian Postulate being fulfilled, the sum of all angles
    within the considered triangle equals $\pi$.  Hence, $\gamma$ is the sole
-   angle for which $\gamma \lesssim \pi$ might hold true since the other angles
+   angle for which $\gamma \approx \pi$ might hold true since the other angles
    are defined facing a side of length $s$ such that they are of equal size, as
    well.  In case $\gamma$ would not be the angle approaching $\pi$, both
    $\alpha$ and $\beta$, which will denote the other angles in the following,
    would approach $\pi$ such that the sum of all angles' sizes would be greater
    than $\pi$.
 
-   In case $\gamma \to \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
+   In case $\gamma \approx \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
    $$
    \textit \th := \frac g s \approx \frac {2 \cdot s} s = 2 \, .
    $$
@@ -119,9 +119,10 @@ isosceles triangle with
    Due to
    $$
    \alpha + \beta + \gamma \overset ! = \pi \land \alpha = \beta \implies \sup
-   \alpha = \sup \beta = \frac \pi 2
+   \alpha = \sup \beta = \frac \pi 2 \, .
    $$
-   such that $\inf \gamma = 0$.  In this case, $g \to 0$ which gives
+   Hence, in case $\alpha, \beta \to \frac \pi 2$, $\gamma \to 0$ such that $g
+   \to 0$, as well.  Then,
    $$
    \textit \th := \frac g s \approx \frac 0 s = 0 \, .
    $$
