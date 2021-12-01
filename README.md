@@ -113,7 +113,7 @@ isosceles triangle with
 
    In case $\gamma \to \pi$, $g \approx s + s = 2 \cdot s$.  Hence,
    $$
-   \textit {\th} := \frac g s \approx \frac {2 \cdot s} s = 2 \, .
+   \textit \th := \frac g s \approx \frac {2 \cdot s} s = 2 \, .
    $$
 
    Due to
@@ -142,8 +142,8 @@ isosceles triangle with
    1 2 \cdot \textit \th = \frac {\textit \th} 2 \, .
    $$
 
-   This equation can be resolved by $\textit \th$ by scaling its both sides with
-   $2$ such that we achieve the first equation of the theorem.
+   This equation can be resolved by $\textit \th$ by scaling both sides with $2$
+   such that we achieve the first equation of the theorem.
 3. Due to $\arcsin$ being the counterpart of $\sin$, the first equation of the
    theorem can be resolved by $\gamma$ which gives
    $$
@@ -179,7 +179,7 @@ The last category, *obtuse* triangles, require, hence, a Side Ratio of more than
 $\sqrt 2$.  Similar to the other categories, there is a special square root
 value for obtuse isosceles triangles, as well:  $\sqrt 3$.  When applying the
 second equation of Örvænting on this value, we achieve $\frac 2 3 \cdot \pi$ as
-the angle facing $g$.
+the size of the angle facing $g$.
 
 In summary, the following Magic Numbers are important values of $\textit \th$:
 
