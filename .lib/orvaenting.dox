@@ -37,6 +37,9 @@
 
 /*! \def    NAME
  *
+ * An internal macro used for name mangling.  It will be tidied up at the end of
+ * its header automatically.
+ *
  * \brief   The name mangling macro for this library.
  * \param   identifier  The identifier to mangle.
  */
