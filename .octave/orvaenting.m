@@ -34,18 +34,26 @@
 %%          sin
 %%
 %%%%
-
-%%%%
 %%
-%% \file     orvaenting.m
-%% \brief    The compression formula for isosceles triangles.
+%%      FILE
+%%          orvaenting.m
 %%
-%% \author       Kevin Matthes
-%% \copyright    (C) 2021 Kevin Matthes.
-%%               This file is licensed GPL 2 as of June 1991.
-%% \date         2021
-%% \note         See `LICENSE' for full license.
-%%               See `README.md' for project details.
+%%      BRIEF
+%%          The compression formula for isosceles triangles.
+%%
+%%      AUTHOR
+%%          Kevin Matthes
+%%
+%%      COPYRIGHT
+%%          (C) 2021 Kevin Matthes.
+%%          This file is licensed GPL 2 as of June 1991.
+%%
+%%      DATE
+%%          2021
+%%
+%%      NOTE
+%%          See `LICENSE' for full license.
+%%          See `README.md' for project details.
 %%
 %%%%
 
