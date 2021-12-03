@@ -1,4 +1,4 @@
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Copyright (C) 2021 Kevin Matthes
 %%
@@ -19,7 +19,7 @@
 %%%%
 %%
 %% -- unorvaenting (ratio)
-%%      Uncompress an isosceles triangle given by its side ratio.
+%%      Uncompress an isosceles triangle given by its Side Ratio.
 %%
 %%      PARAMETERS
 %%          ratio
@@ -31,6 +31,7 @@
 %%
 %%      SEE ALSO
 %%          asin
+%%          orvaenting
 %%
 %%%%
 %%
@@ -54,8 +55,6 @@
 %%          See `LICENSE' for full license.
 %%          See `README.md' for project details.
 %%
-%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function unorvaenting (ratio)

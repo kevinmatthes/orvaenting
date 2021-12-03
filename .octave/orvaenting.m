@@ -1,4 +1,4 @@
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Copyright (C) 2021 Kevin Matthes
 %%
@@ -32,6 +32,7 @@
 %%
 %%      SEE ALSO
 %%          sin
+%%          unorvaenting
 %%
 %%%%
 %%
@@ -55,8 +56,6 @@
 %%          See `LICENSE' for full license.
 %%          See `README.md' for project details.
 %%
-%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function orvaenting (angle)
