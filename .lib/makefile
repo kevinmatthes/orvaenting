@@ -98,3 +98,5 @@ submodule: $(HEADERS) $(LIBRARY) $(LIBDIR)
 
 tidy: $(LIBRARY) $(OBJECTS)
 	$(REMOVE) $^
+
+################################################################################

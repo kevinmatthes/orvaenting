@@ -36,34 +36,21 @@
 ##
 
 # Software.
-ARCHIVE	:= ar
-CC		:= gcc
 COPY	:= cp
-DOXYGEN	:= doxygen
 NEWDIR	:= mkdir
+OCTAVE	:= octave-cli
 REMOVE	:= rm
 
-# Software flags.
-AFLAGS	:= rs
-CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
-LFLAGS	:= -lm
-
-# Make directories.
-MDOX	:= -C ../.doxygen/latex/
-
 # Directories.
-LIBDIR	:= ../../.lib/
-DIRS	:= $(LIBDIR)
+INSTALLDIR	:= ~/octave/orvaenting/
+OCTDIR		:= ~/octave/
+DIRS		:= $(INSTALLDIR) $(OCTAVE)
 
 # Library compilation requirements.
-HEADERS	:= $(wildcard ./*.h)
-LIBRARY	:= ./liborvaenting.a
-SOURCE	:= $(wildcard ./*.c)
-OBJECTS	:= $(subst .c,.o, $(SOURCE))
+SOURCE	:= $(wildcard ./*.m)
 
 # Concrete files.
-DOXYFILE	:= ./doxygen.cfg
-SELF		:= ./makefile
+SELF	:= ./makefile
 
 
 
@@ -73,28 +60,19 @@ SELF		:= ./makefile
 #
 ##
 
-.PHONY: default doxygen library submodule tidy
+.PHONY: install uninstall
 
-default: library
+default: install
 
 $(DIRS):
 	$(NEWDIR) $@
 
-doxygen: $(HEADERS) $(SOURCE)
-	$(DOXYGEN) $(DOXYFILE)
-	make $(MDOX) all
+install: $(DIRS) $(SOURCE)
+	$(COPY) $(SOURCE) $(INSTALLDIR)
+	$(OCTAVE) ./install.m
 
-library: $(LIBRARY)
+uninstall:
+	$(OCTAVE) ./uninstall.m
+	$(REMOVE) $(INSTALLDIR) -rfv
 
-$(LIBRARY): $(OBJECTS)
-	$(ARCHIVE) $(AFLAGS) $@ $^
-
-$(OBJECTS): $(SOURCE)
-	$(CC) $(CFLAGS) -c $(LFLAGS) $^
-
-submodule: $(HEADERS) $(LIBRARY) $(LIBDIR)
-	$(COPY) $(HEADERS) $(LIBRARY) $(LIBDIR)
-	make tidy
-
-tidy: $(LIBRARY) $(OBJECTS)
-	$(REMOVE) $^
+################################################################################
