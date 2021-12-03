@@ -100,6 +100,16 @@ It can be altered as desired.
 
 
 
+## `octave-cli` (`OCTAVE`)
+
+This repository provides functions for GNU Octave.  In case they should be
+installed in order to use them in Octave functions, scripts and sessions, one
+can install them, at option.  Therefore, Octave is required.
+
+Altering this application is not recommended.
+
+
+
 ## `pandoc` (`PANDOC`)
 
 This GPL 2 library and application is used in order to create the printable
