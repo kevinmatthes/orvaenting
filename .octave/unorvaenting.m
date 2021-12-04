@@ -23,7 +23,8 @@
 %%
 %%      PARAMETERS
 %%          ratio
-%%              The Side Ratio of the isosceles triangle to decompress.
+%%              The Side Ratio of the isosceles triangle to decompress.  The
+%%              default value is NaN.
 %%
 %%      RETURN
 %%          The angle facing the Main Side of the considered isosceles

@@ -25,7 +25,7 @@
 %%      PARAMETERS
 %%          angle
 %%              The angle of the isosceles triangle to compress.  Measured in
-%%              radian.
+%%              radian.  The default value is NaN.
 %%
 %%      RETURN
 %%          The Side Ratio of the considered isosceles triangle.
