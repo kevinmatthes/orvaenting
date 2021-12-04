@@ -40,11 +40,11 @@ REMOVE	:= rm
 
 # Make directories.
 MDOCS	:= -C ./.docs/
-MLIB	:= -C ./.lib/
-MOCT	:= -C ./.octave/
+MLIB	:= -C ./lib/
+MOCT	:= -C ./octave/
 
 # Directories.
-DOXDIR	:= ./.doxygen/
+DOXDIR	:= ./.docs/html/ ./.docs/latex/
 
 
 

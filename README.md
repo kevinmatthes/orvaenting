@@ -234,7 +234,7 @@ encouraged to alter this default value of the variable `PDF` as desired.
 
 Furthermore, there is also an automation provided in order to render a source
 code documentation using `doxygen`.  It will be stored in the thereby created
-`./.doxygen/` directory as `refman.pdf`.
+`./.docs/latex/` directory as `refman.pdf`.
 
 
 

@@ -36,4 +36,5 @@
 *.pdf
 
 # Documentation.
-.doxygen/
+.docs/html/
+.docs/latex/

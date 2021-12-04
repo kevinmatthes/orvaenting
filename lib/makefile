@@ -49,10 +49,10 @@ CFLAGS	:= -std=c99 -Wall -Werror -Wextra -Wpedantic -D__ORVAENTING_INTERNAL__
 LFLAGS	:= -lm
 
 # Make directories.
-MDOX	:= -C ../.doxygen/latex/
+MDOX	:= -C ../.docs/latex/
 
 # Directories.
-LIBDIR	:= ../../.lib/
+LIBDIR	:= ../../lib/
 DIRS	:= $(LIBDIR)
 
 # Library compilation requirements.
