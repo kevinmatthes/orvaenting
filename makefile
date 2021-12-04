@@ -36,6 +36,7 @@
 ##
 
 # Software.
+COPY	:= cp
 REMOVE	:= rm
 
 # Make directories.
@@ -46,6 +47,10 @@ MOCT	:= -C ./octave/
 # Directories.
 DOXDIR	:= ./.docs/html/ ./.docs/latex/
 
+# Concrete files.
+PDF		:= ./.docs/documentation.pdf
+REFMAN	:= ./.docs/latex/refman.pdf
+
 
 
 ##
@@ -54,12 +59,11 @@ DOXDIR	:= ./.docs/html/ ./.docs/latex/
 #
 ##
 
-.PHONY: default doxygen install library pdf submodule tidy uninstall
+.PHONY: default doxygen install library manual pdf submodule tidy uninstall
 
 default: submodule
 
-doxygen:
-	make $(MLIB) doxygen
+doxygen: $(REFMAN)
 
 install:
 	make $(MOCT) install
@@ -67,14 +71,23 @@ install:
 library:
 	make $(MLIB) default
 
-pdf:
+manual: $(PDF) $(REFMAN)
+	$(COPY) $(PDF) ./orvaenting.pdf
+	$(COPY) $(REFMAN) ./liborvaenting.pdf
+
+pdf: $(PDF)
+
+$(PDF):
 	make $(MDOCS) default
+
+$(REFMAN):
+	make $(MLIB) doxygen
 
 submodule:
 	make $(MLIB) submodule
 
-tidy: doxygen
-	$(REMOVE) $(DOXDIR) -rf
+tidy: $(REFMAN)
+	$(REMOVE) $(DOXDIR) $(wildcard ./*.pdf) -rf
 	make $(MDOCS) tidy
 	make $(MLIB) tidy
 
