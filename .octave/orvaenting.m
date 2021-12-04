@@ -60,6 +60,7 @@
 
 function ratio = orvaenting (angle = NaN);
     ratio = 2 * sin (angle / 2);
+    return;
 end;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

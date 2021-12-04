@@ -59,6 +59,7 @@
 
 function angle = unorvaenting (ratio = NaN);
     angle = 2 * asin (ratio / 2);
+    return;
 end;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
