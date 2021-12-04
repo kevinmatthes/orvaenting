@@ -252,7 +252,7 @@ When referring to this repository, please use the following Bib\TeX\ entry:
 }
 ```
 
-Please always add a `note` which commit had been the latest one when this
-repository was accessed.
+Please always add to this template the `date` of the latest commit when this
+repository was accessed and name the commit as a `note`.
 
 <!----------------------------------------------------------------------------->
