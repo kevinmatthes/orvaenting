@@ -247,6 +247,7 @@ When referring to this repository, please use the following Bib\TeX\ entry:
     author      = {{M}atthes, {K}evin},
     title       = {\"{O}rv\ae nting},
     subtitle    = {{T}he {C}ompression {A}lgorithm for {I}sosceles {T}riangles},
+    langid      = {british},
     url         = {https://github.com/kevinmatthes/orvaenting},
 }
 ```
