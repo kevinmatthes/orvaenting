@@ -253,6 +253,6 @@ When referring to this repository, please use the following Bib\TeX\ entry:
 ```
 
 Please always add to this template the `date` of the latest commit when this
-repository was accessed and name the commit as a `note`.
+repository was accessed (`urldate`) and name the commit as a `note`.
 
 <!----------------------------------------------------------------------------->
