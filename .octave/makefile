@@ -69,10 +69,10 @@ $(DIRS):
 
 install: $(DIRS) $(SOURCE)
 	$(COPY) $(SOURCE) $(INSTALLDIR)
-	$(OCTAVE) ./install.m
+	$(OCTAVE) ./install_orvaenting.m
 
 uninstall:
-	$(OCTAVE) ./uninstall.m
+	$(OCTAVE) ./uninstall_orvaenting.m
 	$(REMOVE) $(INSTALLDIR) -rfv
 
 ################################################################################

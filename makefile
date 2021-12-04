@@ -41,6 +41,7 @@ REMOVE	:= rm
 # Make directories.
 MDOCS	:= -C ./.docs/
 MLIB	:= -C ./.lib/
+MOCT	:= -C ./.octave/
 
 # Directories.
 DOXDIR	:= ./.doxygen/
@@ -53,12 +54,15 @@ DOXDIR	:= ./.doxygen/
 #
 ##
 
-.PHONY: default doxygen library pdf submodule tidy
+.PHONY: default doxygen install library pdf submodule tidy uninstall
 
 default: submodule
 
 doxygen:
 	make $(MLIB) doxygen
+
+install:
+	make $(MOCT) install
 
 library:
 	make $(MLIB) default
@@ -73,5 +77,8 @@ tidy: doxygen
 	$(REMOVE) $(DOXDIR) -rf
 	make $(MDOCS) tidy
 	make $(MLIB) tidy
+
+uninstall:
+	make $(MOCT) uninstall
 
 ################################################################################

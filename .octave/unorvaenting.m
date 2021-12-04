@@ -57,8 +57,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function unorvaenting (ratio);
-    2 * asin (ratio / 2)
+function angle = unorvaenting (ratio);
+    angle = 2 * asin (ratio / 2);
 endfunction;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
