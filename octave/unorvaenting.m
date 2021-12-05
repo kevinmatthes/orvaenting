@@ -18,11 +18,11 @@
 %%
 %%%%
 %%
-%% -- unorvaenting (ratio)
+%% -- unorvaenting (sideratio)
 %%      Uncompress an isosceles triangle given by its Side Ratio.
 %%
 %%      PARAMETERS
-%%          ratio
+%%          sideratio
 %%              The Side Ratio of the isosceles triangle to decompress.  The
 %%              default value is NaN.
 %%
@@ -58,8 +58,13 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function angle = unorvaenting (ratio = NaN);
-    angle = 2 * asin (ratio / 2);
+function radianangle = unorvaenting (sideratio = NaN);
+    if nargin == 1;
+        radianangle = 2 * asin (sideratio / 2);
+    else;
+        radianangle = NaN;
+    end;
+
     return;
 end;
 

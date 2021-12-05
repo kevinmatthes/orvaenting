@@ -59,9 +59,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function sideratio = orvaenting (radianangle = NaN);
-    if isempty (radianangle);
-        sideratio = NaN;
-    elseif nargin == 1;
+    if nargin == 1;
         sideratio = 2 * sin (radianangle / 2);
     else;
         sideratio = NaN;
