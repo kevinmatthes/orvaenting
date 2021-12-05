@@ -25,7 +25,8 @@
 %%      PARAMETERS
 %%          radianangle
 %%              The angle of the isosceles triangle to compress.  Measured in
-%%              radian.  The default value is NaN.
+%%              radian.  The default value is NaN.  radianangle needs to greater
+%%              than zero but less than pi.
 %%
 %%      RETURN
 %%          The Side Ratio of the considered isosceles triangle.
@@ -59,7 +60,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function sideratio = orvaenting (radianangle = NaN);
-    if nargin == 1;
+    if nargin == 1 && radianangle > 0 && radianangle < pi;
         sideratio = 2 * sin (radianangle / 2);
     else;
         sideratio = NaN;

@@ -24,7 +24,8 @@
 %%      PARAMETERS
 %%          sideratio
 %%              The Side Ratio of the isosceles triangle to decompress.  The
-%%              default value is NaN.
+%%              default value is NaN.  sideratio needs to be greater than zero
+%%              but less than 2.
 %%
 %%      RETURN
 %%          The angle facing the Main Side of the considered isosceles
@@ -59,7 +60,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function radianangle = unorvaenting (sideratio = NaN);
-    if nargin == 1;
+    if nargin == 1 && sideratio > 0 && sideratio < 2;
         radianangle = 2 * asin (sideratio / 2);
     else;
         radianangle = NaN;
