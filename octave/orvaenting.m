@@ -18,12 +18,12 @@
 %%
 %%%%
 %%
-%% -- orvaenting (angle)
+%% -- orvaenting (radianangle)
 %%      Compress an isosceles triangle given by the angle facing its Main Side.
 %%      The angle is expected to be measured in radian.
 %%
 %%      PARAMETERS
-%%          angle
+%%          radianangle
 %%              The angle of the isosceles triangle to compress.  Measured in
 %%              radian.  The default value is NaN.
 %%
@@ -58,8 +58,15 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function ratio = orvaenting (angle = NaN);
-    ratio = 2 * sin (angle / 2);
+function sideratio = orvaenting (radianangle = NaN);
+    if isempty (radianangle);
+        sideratio = NaN;
+    elseif nargin == 1;
+        sideratio = 2 * sin (radianangle / 2);
+    else;
+        sideratio = NaN;
+    end;
+
     return;
 end;
 
