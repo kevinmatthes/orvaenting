@@ -59,11 +59,21 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function radianangle = unorvaenting (sideratio = NaN);
-    if nargin == 1 && sideratio > 0 && sideratio < 2;
-        radianangle = 2 * asin (sideratio / 2);
+function X = unorvaenting (R = NaN);
+    if nargin == 1;
+        X = [];
+
+        for index = 1 : length (R);
+            if R(index) > 0 && R(index) < 2;
+                x = 2 * asin (R(index) / 2);
+            else;
+                x = NaN;
+            end;
+
+            X = [X x];
+        end;
     else;
-        radianangle = NaN;
+        X = NaN;
     end;
 
     return;

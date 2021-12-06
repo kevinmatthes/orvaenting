@@ -75,8 +75,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function R = orvaenting (X = NaN);
-    if nargin == 1 && X > 0 && X < pi;
-        R = 2 * sin (X / 2);
+    if nargin == 1;
+        R = []
+
+        for index = 1 : length (X);
+            if X(index) > 0 && X(index) < pi;
+                r = 2 * sin (X(index) / 2);
+            else;
+                r = NaN;
+            end;
+
+            R = [R r];
+        end;
     else;
         R = NaN;
     end;
