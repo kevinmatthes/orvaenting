@@ -78,7 +78,7 @@
 
 function R = orvaenting (X = NaN);
     if nargin == 1;
-        R = []
+        R = [];
 
         for index = 1 : length (X);
             if X(index) > 0 && X(index) < pi;
