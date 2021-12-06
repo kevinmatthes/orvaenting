@@ -18,18 +18,33 @@
 %%
 %%%%
 %%
-%% -- orvaenting (radianangle)
+%% -- R = orvaenting (X)
 %%      Compress an isosceles triangle given by the angle facing its Main Side.
 %%      The angle is expected to be measured in radian.
 %%
 %%      PARAMETERS
-%%          radianangle
-%%              The angle of the isosceles triangle to compress.  Measured in
-%%              radian.  The default value is NaN.  radianangle needs to greater
-%%              than zero but less than pi.
+%%          X
+%%              For each radian angle in X, the corresponding Side Ratio will be
+%%              computed and saved in the resulting vector R.  Thereby, any
+%%              element of X represents one angle which faces the Main Side of
+%%              an isosceles triangle.  Hence, the value of an angle needs to be
+%%              greater than zero but less than pi due to the properties on an
+%%              isosceles triangle.
+%%
+%%              By default, X is assumed to be a single real number within the
+%%              given range.  In case that no value for X is passed to the
+%%              function, NaN is assumed.
 %%
 %%      RETURN
-%%          The Side Ratio of the considered isosceles triangle.
+%%          R
+%%              The vector of Side Ratios -- one for each valid angle.
+%%
+%%              In case that no parameter or more than one is given, NaN will be
+%%              returned.  Multiple angles need to be passed as a vector to the
+%%              function.
+%%
+%%              In case that a vector of angles should contain any invalid one,
+%%              the result will be NaN for the whole function call.
 %%
 %%      SEE ALSO
 %%          sin
