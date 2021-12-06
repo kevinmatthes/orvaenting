@@ -43,8 +43,11 @@
 %%              returned.  Multiple angles need to be passed as a vector to the
 %%              function.
 %%
-%%              In case that a vector of angles should contain any invalid one,
-%%              the result will be NaN for the whole function call.
+%%              Any invalid value will result in NaN as a result for this
+%%              particular function call.  Hence, a vector containing just one
+%%              invalid angle will not imply NaN for the whole function call but
+%%              as a result for this single invalid value.  Any other valid
+%%              angles will still produce valid Side Ratios.
 %%
 %%      SEE ALSO
 %%          sin
