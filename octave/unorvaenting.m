@@ -18,18 +18,19 @@
 %%
 %%%%
 %%
-%% -- unorvaenting (sideratio)
+%% -- X = unorvaenting (R)
 %%      Uncompress an isosceles triangle given by its Side Ratio.
 %%
 %%      PARAMETERS
-%%          sideratio
+%%          R
 %%              The Side Ratio of the isosceles triangle to decompress.  The
 %%              default value is NaN.  sideratio needs to be greater than zero
 %%              but less than 2.
 %%
 %%      RETURN
-%%          The angle facing the Main Side of the considered isosceles
-%%          triangle.  Measured in radian.
+%%          X
+%%              The angle facing the Main Side of the considered isosceles
+%%              triangle.  Measured in radian.
 %%
 %%      SEE ALSO
 %%          asin
