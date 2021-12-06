@@ -43,8 +43,8 @@
 %%
 %%              A vector containing just one invalid Side Ratio will not imply
 %%              NaN as the result for the whole function call but as the element
-%%              of the resulting vector this certatin input value.  Any other
-%%              valid Side Ratio will still produce valid radian angles.
+%%              of the resulting vector for this certatin input value.  Any
+%%              other valid Side Ratio will still produce valid radian angles.
 %%
 %%      SEE ALSO
 %%          asin
