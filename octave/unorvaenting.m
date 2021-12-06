@@ -23,14 +23,29 @@
 %%
 %%      PARAMETERS
 %%          R
-%%              The Side Ratio of the isosceles triangle to decompress.  The
-%%              default value is NaN.  sideratio needs to be greater than zero
-%%              but less than 2.
+%%              For each Side Ratio in R, the corresponding radian angle will be
+%%              computed and saved in the resulting vector X.  Thereby, any
+%%              element of R represents the Side Ratio of an isosceles triangle.
+%%              Hence, the value of a Side Ratio needs to be greater then zero
+%%              but less than two due to the properties of isosceles triangles.
+%%
+%%              By default, R is assumed to be a single real number within the
+%%              given range.  In case that no value for R is passed to the
+%%              function, NaN is assumed.
 %%
 %%      RETURN
 %%          X
-%%              The angle facing the Main Side of the considered isosceles
-%%              triangle.  Measured in radian.
+%%              The vector of radian angles -- one for each valid Side Ratio.
+%%
+%%              In case that no parameter or more than one is given, NaN will be
+%%              returned.  Multiple Side Ratios need to be passed as a vector to
+%%              the function.
+%%
+%%              Any invalid value will result in NaN as a result for this
+%%              particular function call.  Hence, a vector containing just one
+%%              invalid Side Ratio will not imply NaN for the whole function
+%%              call but as a result for this certain invalid Side Ratio.  Any
+%%              other valid Side Ratios will still produce valid radian angles.
 %%
 %%      SEE ALSO
 %%          asin

@@ -28,8 +28,8 @@
 %%              computed and saved in the resulting vector R.  Thereby, any
 %%              element of X represents one angle which faces the Main Side of
 %%              an isosceles triangle.  Hence, the value of an angle needs to be
-%%              greater than zero but less than pi due to the properties on an
-%%              isosceles triangle.
+%%              greater than zero but less than pi due to the properties of
+%%              isosceles triangles.
 %%
 %%              By default, X is assumed to be a single real number within the
 %%              given range.  In case that no value for X is passed to the
@@ -46,7 +46,7 @@
 %%              Any invalid value will result in NaN as a result for this
 %%              particular function call.  Hence, a vector containing just one
 %%              invalid angle will not imply NaN for the whole function call but
-%%              as a result for this single invalid value.  Any other valid
+%%              as a result for this certain invalid value.  Any other valid
 %%              angles will still produce valid Side Ratios.
 %%
 %%      SEE ALSO
