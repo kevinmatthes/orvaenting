@@ -59,11 +59,11 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function sideratio = orvaenting (radianangle = NaN);
-    if nargin == 1 && radianangle > 0 && radianangle < pi;
-        sideratio = 2 * sin (radianangle / 2);
+function R = orvaenting (X = NaN);
+    if nargin == 1 && X > 0 && X < pi;
+        R = 2 * sin (X / 2);
     else;
-        sideratio = NaN;
+        R = NaN;
     end;
 
     return;
