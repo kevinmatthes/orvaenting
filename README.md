@@ -224,17 +224,22 @@ source files' directory.
 ### Documentation
 
 ```
-make doxygen
 make pdf
+make doxygen
+make manual
 ```
 
-This command will compile a printable version of this documentation using
-`pandoc`.  It will be named `documentation.pdf`, by default.  Users are
+This command, `pdf`, will compile a printable version of this documentation
+using `pandoc`.  It will be named `documentation.pdf`, by default.  Users are
 encouraged to alter this default value of the variable `PDF` as desired.
 
 Furthermore, there is also an automation provided in order to render a source
 code documentation using `doxygen`.  It will be stored in the thereby created
 `./.docs/latex/` directory as `refman.pdf`.
+
+In order to compile both summaries, the command `manual` is provided.  By
+calling this build instruction, the compiled documentations will be copied to
+the main directory.
 
 
 
