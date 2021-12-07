@@ -26,7 +26,7 @@
 %%              For each Side Ratio in R, the corresponding radian angle will be
 %%              computed and saved in the resulting vector X.  Thereby, any
 %%              element of R represents the Side Ratio of an isosceles triangle.
-%%              Hence, the value of a Side Ratio needs to be greater then zero
+%%              Hence, the value of a Side Ratio needs to be greater than zero
 %%              but less than two due to the properties of isosceles triangles.
 %%
 %%              By default, R is assumed to be a single real number within the
