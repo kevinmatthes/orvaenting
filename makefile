@@ -90,6 +90,7 @@ tidy: $(REFMAN)
 	$(REMOVE) $(DOXDIR) $(wildcard ./*.pdf) -rf
 	make $(MDOCS) tidy
 	make $(MLIB) tidy
+	make $(MOCT) tidy
 
 uninstall:
 	make $(MOCT) uninstall

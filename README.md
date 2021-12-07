@@ -237,9 +237,9 @@ Furthermore, there is also an automation provided in order to render a source
 code documentation using `doxygen`.  It will be stored in the thereby created
 `./.docs/latex/` directory as `refman.pdf`.
 
-In order to compile both summaries, the command `manual` is provided.  By
-calling this build instruction, the compiled documentations will be copied to
-the main directory.
+In order to render both summaries, the command `manual` is provided.  By calling
+this build instruction, the compiled documentations will be copied to the main
+directory.
 
 
 
