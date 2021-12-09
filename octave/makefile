@@ -44,8 +44,7 @@ REMOVE	:= rm
 # Directories.
 INSTALLDIR	:= ~/octave/orvaenting/
 OCTDIR		:= ~/octave/
-REMOVEDIR	:= ./octave-cli/
-DIRS		:= $(INSTALLDIR) $(OCTAVE)
+DIRS		:= $(INSTALLDIR) $(OCTDIR)
 
 # Library compilation requirements.
 SOURCE	:= $(wildcard ./*.m)
@@ -68,14 +67,9 @@ default: install
 $(DIRS):
 	$(NEWDIR) $@
 
-install: $(REMOVEDIR)
-
-$(REMOVEDIR): $(DIRS) $(SOURCE)
+install: $(DIRS) $(SOURCE)
 	$(COPY) $(SOURCE) $(INSTALLDIR)
 	$(OCTAVE) ./install_orvaenting.m
-
-tidy: $(REMOVEDIR)
-	$(REMOVE) $^ -r
 
 uninstall:
 	$(OCTAVE) ./uninstall_orvaenting.m
