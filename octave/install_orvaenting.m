@@ -18,6 +18,12 @@
 %%
 %%%%
 %%
+%%      SEE ALSO
+%%          addpath
+%%          savepath
+%%
+%%%%
+%%
 %%      FILE
 %%          install_orvaenting.m
 %%
