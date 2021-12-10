@@ -49,6 +49,7 @@
 %%              other valid angle will still produce valid Side Ratios.
 %%
 %%      SEE ALSO
+%%          NaN
 %%          sin
 %%          unorvaenting
 %%
