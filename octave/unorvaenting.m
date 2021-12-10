@@ -47,6 +47,7 @@
 %%              other valid Side Ratio will still produce valid radian angles.
 %%
 %%      SEE ALSO
+%%          NaN
 %%          asin
 %%          orvaenting
 %%
