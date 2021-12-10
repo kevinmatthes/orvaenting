@@ -50,6 +50,8 @@
 %%      SEE ALSO
 %%          NaN
 %%          asin
+%%          length
+%%          nargin
 %%          orvaenting
 %%
 %%%%
