@@ -23,7 +23,7 @@
 %%
 %%      PARAMETERS
 %%          R
-%%              For each Side Ratio in R, the corresponding radian angle will be
+%%              For each Side Ratio in R, the corresponding angle will be
 %%              computed and saved in the resulting vector X.  Thereby, any
 %%              element of R represents the Side Ratio of an isosceles triangle.
 %%              Hence, the value of a Side Ratio needs to be greater than zero
@@ -35,7 +35,8 @@
 %%
 %%      RETURN
 %%          X
-%%              The vector of radian angles -- one for each valid Side Ratio.
+%%              The vector of angles -- one for each valid Side Ratio.  Each one
+%%              will be measured in radians.
 %%
 %%              In case that no parameter or more than one is given, NaN will be
 %%              returned.  Multiple Side Ratios need to be passed as a vector to
@@ -44,7 +45,7 @@
 %%              A vector containing just one invalid Side Ratio will not imply
 %%              NaN as the result for the whole function call but as the element
 %%              of the resulting vector for this certatin input value.  Any
-%%              other valid Side Ratio will still produce valid radian angles.
+%%              other valid Side Ratio will still produce valid angles.
 %%
 %%      SEE ALSO
 %%          NaN
