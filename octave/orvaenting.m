@@ -20,11 +20,11 @@
 %%
 %% -- R = orvaenting (X)
 %%      Compress an isosceles triangle given by the angle facing its Main Side.
-%%      The angle is expected to be measured in radian.
+%%      The angle is expected to be measured in radians.
 %%
 %%      PARAMETERS
 %%          X
-%%              For each radian angle in X, the corresponding Side Ratio will be
+%%              For each angle in X, the corresponding Side Ratio will be
 %%              computed and saved in the resulting vector R.  Thereby, any
 %%              element of X represents one angle which faces the Main Side of
 %%              an isosceles triangle.  Hence, the value of an angle needs to be
@@ -35,6 +35,8 @@
 %%              given range.  In case that no value for X is passed to the
 %%              function, NaN is assumed.
 %%
+%%              Each angle in X is assumed to be measured in radians.
+%%
 %%      RETURN
 %%          R
 %%              The vector of Side Ratios -- one for each valid angle.
@@ -43,10 +45,10 @@
 %%              returned.  Multiple angles need to be passed as a vector to the
 %%              function.
 %%
-%%              A vector containing just one invalid radian angle will not imply
-%%              NaN as the result for the whole function call but as the element
-%%              of the resulting vector for this certatin input value.  Any
-%%              other valid angle will still produce valid Side Ratios.
+%%              A vector containing just one invalid angle will not imply NaN as
+%%              the result for the whole function call but as the element of the
+%%              resulting vector for this certatin input value.  Any other valid
+%%              angle will still produce valid Side Ratios.
 %%
 %%      SEE ALSO
 %%          NaN
