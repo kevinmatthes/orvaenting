@@ -52,6 +52,8 @@
 %%
 %%      SEE ALSO
 %%          NaN
+%%          length
+%%          nargin
 %%          sin
 %%          unorvaenting
 %%
