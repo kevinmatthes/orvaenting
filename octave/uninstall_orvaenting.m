@@ -18,6 +18,12 @@
 %%
 %%%%
 %%
+%%      SEE ALSO
+%%          rmpath
+%%          savepath
+%%
+%%%%
+%%
 %%      FILE
 %%          uninstall_orvaenting.m
 %%
