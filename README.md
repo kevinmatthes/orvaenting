@@ -77,7 +77,7 @@ This repository provides three sample C implementations for each formula.
 ### The Theorem
 
 Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
-**isosceles triangle** assuming the *Fifth Euclidian Postulate* to be fulfilled.
+**isosceles triangle** assuming the *Fifth Euclidean Postulate* to be fulfilled.
 Then,
 \begin{align*}
 \textit \th &= 2 \cdot \sin \left( \frac \gamma 2 \right) \, , \\
@@ -95,14 +95,14 @@ isosceles triangle with
 ### Proof
 
 1. Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
-   isosceles triangle assuming the Fifth Euclidian Postulate to be fulfilled.
+   isosceles triangle assuming the Fifth Euclidean Postulate to be fulfilled.
 
    Then, at least two sides of the resulting triangle have equal lengths.  These
    sides are named *Further Sides* whose length is denoted by $s$.  The third
    side whose length might not equal $s$ is named *Main Side* and denoted by
    $g$.  By definition, this side faces the angle $\gamma$.
 
-   Due to the Fifth Euclidian Postulate being fulfilled, the sum of all angles
+   Due to the Fifth Euclidean Postulate being fulfilled, the sum of all angles
    within the considered triangle equals $\pi$.  Hence, $\gamma$ is the sole
    angle for which $\gamma \approx \pi$ might hold true since the other angles
    are defined facing a side of length $s$ such that they are of equal size, as
@@ -131,7 +131,7 @@ isosceles triangle with
    (0, \pi)$, as shown, $\textit \th$ will never reach its interval's bounds, as
    well.
 2. Let $A, B, C \in \mathbb R ^ d, \, d \in [2, \infty) \cap \mathbb N$ form an
-   isosceles triangle, assuming the Fifth Euclidian Postulate to be fulfilled
+   isosceles triangle, assuming the Fifth Euclidean Postulate to be fulfilled
    and $\gamma$ facing $g$.
 
    By constructing the height over $g$, we achieve two perpendicular triangles
